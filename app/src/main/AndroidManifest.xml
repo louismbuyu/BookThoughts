@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.louisnelsonlevoride.bookthoughts">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Onboarding.MainActivity"
+            android:theme="@style/AppThemeNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Books.AddBookInfoActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".NavigationActivity" />
+        <activity
+            android:name=".NavigationActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Onboarding.IntroActivity"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".Authentication.SignUpActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:parentActivityName=".Onboarding.IntroActivity"
+            android:theme="@style/AppThemeActionBar" />
+        <activity
+            android:name=".Authentication.LoginActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:parentActivityName=".Onboarding.IntroActivity"
+            android:theme="@style/AppThemeActionBar" />
+        <activity
+            android:name=".Books.iTunes.ItunesActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:launchMode="singleTop"
+            android:parentActivityName=".Books.AddBookInfoActivity" />
+        <activity
+            android:name=".Books.CustomBook.CustomBookActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:launchMode="singleTop"
+            android:parentActivityName=".Books.iTunes.ItunesActivity" />
+        <activity
+            android:name=".Books.Chapters.ChaptersActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:launchMode="singleTop"
+            android:parentActivityName=".NavigationActivity" />
+        <activity
+            android:name=".Books.Chapters.AddEditChapterActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Books.Quotes.QuotesActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:launchMode="singleTop"
+            android:parentActivityName=".Books.Chapters.ChaptersActivity" />
+        <activity
+            android:name=".Books.Quotes.AddEditQuoteActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:launchMode="singleTop"
+            android:parentActivityName=".Books.Quotes.QuotesActivity" />
+        <activity
+            android:name=".Books.AddEditBookActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:launchMode="singleTop"
+            android:parentActivityName=".Books.iTunes.ItunesActivity" />
+        <activity
+            android:name=".Books.Quotes.DisplayQuoteActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:launchMode="singleTop"
+            android:parentActivityName=".Books.Quotes.QuotesActivity" />
+        <activity
+            android:name=".Chat.MessagesActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:parentActivityName=".NavigationActivity" />
+        <activity
+            android:name=".Users.UsersActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:launchMode="singleTop"
+            android:parentActivityName=".Books.Quotes.DisplayQuoteActivity" />
+        <activity
+            android:name=".Profile.SettingsActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:launchMode="singleTop"
+            android:parentActivityName=".NavigationActivity" />
+        <activity
+            android:name=".Profile.ProfileActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:launchMode="singleTop"
+            android:parentActivityName=".NavigationActivity" />
+        <activity
+            android:name=".Profile.EditProfileActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:launchMode="singleTop"
+            android:parentActivityName=".Profile.ProfileActivity" />
+
+        <receiver android:name=".BookThoughtWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/book_thought_widget_info" />
+        </receiver>
+    </application>
+
+</manifest>

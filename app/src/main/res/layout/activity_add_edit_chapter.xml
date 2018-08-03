@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Books.Chapters.AddEditChapterActivity">
+
+    <EditText
+        android:id="@+id/chapter_title_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/chapter_title"
+        android:layout_marginStart="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/chapter_number_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chapter_title_edit_text"
+        android:layout_marginStart="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN"
+        android:hint="@string/chapter_number"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/chapter_save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:background="@color/custom_green"
+        android:textColor="@color/white"
+        android:layout_below="@id/chapter_number_edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/chapter_delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:background="@color/custom_red"
+        android:textColor="@color/white"
+        android:layout_below="@id/chapter_save_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>

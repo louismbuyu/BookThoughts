@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Books.Quotes.AddEditQuoteActivity"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/new_quote_image"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/uploadimage"
+                android:contentDescription="@string/click_here_to_add_image"
+                android:layout_margin="16dp"/>
+
+            <TextView
+                android:id="@+id/new_quote_thought_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/thought"
+                android:layout_below="@+id/new_quote_image"
+                android:layout_marginStart="@dimen/SIDE_MARGIN_EX"
+                android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"/>
+
+            <EditText
+                android:id="@+id/new_quote_thought_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/new_quote_thought_title"
+                android:hint="@string/enter_thought_here"
+                android:layout_marginStart="@dimen/SIDE_MARGIN_EX"
+                android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+                android:layout_marginTop="@dimen/VERTICAL_MARGIN_SMALL"
+                android:inputType="textMultiLine"
+                android:maxLines="5"/>
+
+            <Button
+                android:id="@+id/new_quote_save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/new_quote_thought_edit_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/VERTICAL_MARGIN_LARGE"
+                android:text="@string/save"
+                android:background="@color/custom_green"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/new_quote_delete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/new_quote_save_button"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/VERTICAL_MARGIN_LARGE"
+                android:text="@string/delete"
+                android:background="#e65858"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

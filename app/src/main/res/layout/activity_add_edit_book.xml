@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Books.AddEditBookActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/edit_book_image_view"
+                android:layout_width="100dp"
+                android:layout_height="140dp"
+                android:src="@drawable/defaultaddimage"
+                android:contentDescription="@string/click_here_to_add_image"
+                android:layout_marginTop="@dimen/VERTICAL_MARGIN"
+                android:layout_marginStart="@dimen/SIDE_MARGIN_EX"/>
+
+            <TextView
+                android:id="@+id/edit_book_title_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:layout_toEndOf="@id/edit_book_image_view"
+                android:layout_marginTop="@dimen/VERTICAL_MARGIN"
+                android:layout_marginStart="@dimen/SIDE_MARGIN_IN"
+                android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"/>
+
+            <EditText
+                android:id="@+id/edit_book_title_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/title"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_below="@id/edit_book_title_text_view"
+                android:layout_toEndOf="@id/edit_book_image_view"
+                android:layout_marginTop="@dimen/VERTICAL_MARGIN_SMALL"
+                android:layout_marginStart="@dimen/SIDE_MARGIN_IN"
+                android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"/>
+
+            <TextView
+                android:id="@+id/edit_book_author_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/author"
+                android:layout_below="@id/edit_book_title_edit_text"
+                android:layout_toEndOf="@id/edit_book_image_view"
+                android:layout_marginTop="@dimen/VERTICAL_MARGIN"
+                android:layout_marginStart="@dimen/SIDE_MARGIN_IN"
+                android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+                />
+
+            <EditText
+                android:id="@+id/edit_book_author_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/author"
+                android:layout_below="@id/edit_book_author_text_view"
+                android:layout_toEndOf="@id/edit_book_image_view"
+                android:layout_marginTop="@dimen/VERTICAL_MARGIN_SMALL"
+                android:layout_marginStart="@dimen/SIDE_MARGIN_IN"
+                android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+                android:maxLines="1"
+                android:singleLine="true"/>
+
+
+            <Button
+                android:id="@+id/edit_book_save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_book_image_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/VERTICAL_MARGIN_LARGE"
+                android:text="@string/save"
+                android:background="@color/custom_green"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/edit_book_delete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_book_save_button"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/VERTICAL_MARGIN_LARGE"
+                android:text="@string/delete"
+                android:background="@color/custom_red"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

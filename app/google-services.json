@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "653587854208",
+    "firebase_url": "https://bookthoughts-cddfd.firebaseio.com",
+    "project_id": "bookthoughts-cddfd",
+    "storage_bucket": "bookthoughts-cddfd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:653587854208:android:f1530f5f0893e8ba",
+        "android_client_info": {
+          "package_name": "com.example.louisnelsonlevoride.bookthoughts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "653587854208-83aui9fu7p85hpm9aph5j3cvtsi5hjhe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.louisnelsonlevoride.bookthoughts",
+            "certificate_hash": "b2eb9103f11e97bad67db681c3bbc5c1e29949d9"
+          }
+        },
+        {
+          "client_id": "653587854208-0nk63r3e87qs856rnv6crj8bdk7q4atn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMFWL9lMAUzXB9KFeyoC0pC3SsBmHBpaU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "653587854208-0nk63r3e87qs856rnv6crj8bdk7q4atn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

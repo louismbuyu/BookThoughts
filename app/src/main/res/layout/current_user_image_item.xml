@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/current_user_image_chat_bubble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN"
+        android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginStart="@dimen/MESSAGE_MARGIN"
+        android:background="@drawable/border_image"
+        android:contentDescription="@string/image_of_quote_sent_from_the_current_user"
+        android:scaleType="fitCenter"/>
+
+    <TextView
+        android:id="@+id/current_user_image_time_stamp_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:gravity="center_vertical"
+        android:layout_toStartOf="@id/current_user_image_profile_image_view"
+        android:layout_marginEnd="@dimen/SIDE_MARGIN_IN"
+        android:layout_marginStart="@dimen/MESSAGE_MARGIN"
+        android:layout_alignBottom="@id/current_user_image_profile_image_view"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/current_user_image_profile_image_view"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/current_user_image_chat_bubble"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN"
+        android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginBottom="@dimen/VERTICAL_MARGIN"/>
+
+</RelativeLayout>

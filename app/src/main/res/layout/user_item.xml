@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_profile_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN"
+        android:layout_marginStart="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginBottom="@dimen/VERTICAL_MARGIN"/>
+
+    <TextView
+        android:id="@+id/user_username_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN"
+        android:layout_toEndOf="@+id/user_profile_image"
+        android:layout_marginStart="@dimen/SIDE_MARGIN_IN"
+        android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/user_display_name_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_username_text_view"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN"
+        android:layout_marginBottom="@dimen/VERTICAL_MARGIN"
+        android:layout_toEndOf="@+id/user_profile_image"
+        android:layout_marginStart="@dimen/SIDE_MARGIN_IN"
+        android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+        android:maxLines="1"
+        android:textColor="#454545"
+        android:textSize="16sp"/>
+
+</RelativeLayout>

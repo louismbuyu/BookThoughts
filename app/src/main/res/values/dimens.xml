@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="VERTICAL_MARGIN">8dp</dimen>
+    <dimen name="SIDE_MARGIN_EX">16dp</dimen>
+    <dimen name="SIDE_MARGIN_IN">8dp</dimen>
+    <dimen name="VERTICAL_MARGIN_SMALL">4dp</dimen>
+    <dimen name="VERTICAL_MARGIN_LARGE">16dp</dimen>
+    <dimen name="MESSAGE_MARGIN">50dp</dimen>
+
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">8dp</dimen>
+</resources>

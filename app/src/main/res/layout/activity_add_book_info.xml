@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Books.AddBookInfoActivity">
+
+    <EditText
+        android:id="@+id/book_title_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN"
+        android:hint="@string/enter_book_title"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/book_author_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/book_title_edit_text"
+        android:layout_marginStart="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN"
+        android:hint="@string/enter_book_author"
+        android:singleLine="true"/>
+
+    <Button
+        android:id="@+id/add_book_title_next_btn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/book_author_edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN_LARGE"/>
+
+</RelativeLayout>

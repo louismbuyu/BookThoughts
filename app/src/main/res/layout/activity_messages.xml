@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Chat.MessagesActivity"
+    android:background="@color/white"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/messages_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ToolBarStyle">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/toolbar_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/messages_recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/messages_toolbar"
+        android:layout_above="@id/divider"
+        android:background="@color/white"
+        android:windowSoftInputMode="adjustResize"/>
+
+    <TextView
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
+        android:layout_above="@id/chat_input_edit_text"
+        android:layout_marginBottom="@dimen/VERTICAL_MARGIN_SMALL"/>
+
+    <EditText
+        android:id="@+id/chat_input_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/type_here"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginEnd="@dimen/SIDE_MARGIN_IN"
+        android:layout_marginBottom="@dimen/VERTICAL_MARGIN"
+        android:layout_toStartOf="@id/send_btn"
+        android:windowSoftInputMode="adjustResize"/>
+
+    <Button
+        android:id="@+id/send_btn"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginBottom="@dimen/VERTICAL_MARGIN"
+        android:text="@string/send"
+        android:textSize="15sp"/>
+
+</RelativeLayout>

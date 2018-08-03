@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/quote_number_text_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:textSize="23sp"
+        android:layout_marginStart="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN"/>
+
+    <TextView
+        android:id="@+id/timestamp_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/quote_number_text_view"
+        android:layout_marginStart="@dimen/SIDE_MARGIN_IN"
+        android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN"
+        android:textColor="#505050"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/thought_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timestamp_text"
+        android:layout_toEndOf="@id/quote_number_text_view"
+        android:layout_marginStart="@dimen/SIDE_MARGIN_IN"
+        android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN_SMALL"
+        android:textColor="#000000"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:id="@+id/quote_image"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="#ffffff"
+        android:layout_toEndOf="@id/quote_number_text_view"
+        android:contentDescription="@string/image_of_quote"
+        android:layout_marginStart="@dimen/SIDE_MARGIN_IN"
+        android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+        android:layout_below="@id/thought_text"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN"
+        android:layout_marginBottom="@dimen/VERTICAL_MARGIN"/>
+
+</RelativeLayout>

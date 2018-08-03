@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/profile_tab_settings_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/icon_image_of_a_bolt_for_settings"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN_LARGE"
+        android:layout_marginStart="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginBottom="@dimen/VERTICAL_MARGIN_LARGE"
+        android:src="@drawable/settings"/>
+
+    <TextView
+        android:id="@+id/profile_tab_settings_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/settings"
+        android:textSize="22sp"
+        android:textColor="#505050"
+        android:layout_toStartOf="@id/profile_tab_settings_indicator"
+        android:layout_toEndOf="@id/profile_tab_settings_image"
+        android:layout_marginStart="@dimen/SIDE_MARGIN_IN"
+        android:layout_marginEnd="@dimen/SIDE_MARGIN_IN"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN_LARGE"
+        android:gravity="center_vertical"/>
+
+    <ImageView
+        android:id="@+id/profile_tab_settings_indicator"
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN_LARGE"
+        android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+        android:contentDescription="@string/indication_image_to_click_next"
+        android:src="@drawable/next"
+        android:scaleType="fitCenter"/>
+
+</RelativeLayout>

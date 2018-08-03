@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Books.Quotes.DisplayQuoteActivity"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/shareable_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+                
+                <ImageView
+                    android:id="@+id/comma_image_top"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="@dimen/SIDE_MARGIN_EX"
+                    android:layout_marginTop="@dimen/VERTICAL_MARGIN"
+                    android:contentDescription="@string/quotation_mark_top"
+                    android:src="@drawable/commatop"
+                    android:scaleType="fitCenter"/>
+
+                <ImageView
+                    android:id="@+id/display_quote_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/comma_image_top"
+                    android:contentDescription="@string/image_of_quote"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/uploadimage"
+                    android:layout_toEndOf="@id/comma_image_top"
+                    android:layout_toStartOf="@+id/comma_image_bottom"/>
+
+                <ImageView
+                    android:id="@+id/comma_image_bottom"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/display_quote_image"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/quotation_mark_bottom"
+                    android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+                    android:src="@drawable/commabottom"/>
+
+                <TextView
+                    android:id="@+id/display_quote_book_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/comma_image_bottom"
+                    android:layout_toStartOf="@+id/comma_image_bottom"
+                    android:layout_toEndOf="@+id/comma_image_top"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp"
+                    android:textStyle="italic"/>
+
+                <ImageView
+                    android:id="@+id/thought_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/display_quote_book_title"
+                    android:contentDescription="@string/icon_image_of_a_brain"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/VERTICAL_MARGIN"
+                    android:src="@drawable/thought"/>
+
+                <TextView
+                    android:id="@+id/new_quote_thought_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/thought_icon"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="@dimen/SIDE_MARGIN_EX"
+                    android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+                    android:layout_marginTop="@dimen/VERTICAL_MARGIN_SMALL"
+                    android:layout_marginBottom="@dimen/VERTICAL_MARGIN"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/button_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/shareable_layout"
+                android:layout_marginTop="@dimen/VERTICAL_MARGIN_LARGE">
+
+                <Button
+                    android:id="@+id/quote_share_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share"
+                    android:background="@color/custom_green"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/SIDE_MARGIN_IN"/>
+
+                <Button
+                    android:id="@+id/quote_edit_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit"
+                    android:background="#2575e6"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/SIDE_MARGIN_IN"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

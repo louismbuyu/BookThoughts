@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginStart="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN_LARGE"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/next_indicator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/value_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/VERTICAL_MARGIN_LARGE"
+        android:layout_marginEnd="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginStart="@dimen/SIDE_MARGIN_EX"
+        android:layout_marginTop="@dimen/VERTICAL_MARGIN_SMALL"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next_indicator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_text_view" />
+
+    <ImageView
+        android:id="@+id/next_indicator"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/icon_image_of_arrow_pointing_right"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title_text_view"
+        app:layout_constraintBottom_toBottomOf="@id/value_text_view"
+        android:src="@drawable/next"
+        android:scaleType="centerInside"/>
+
+</android.support.constraint.ConstraintLayout>
